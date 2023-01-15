@@ -4,7 +4,6 @@ collections:
   /:
     permalink: /{slug}/
     template: index
-    filter: tags:[-Pizza]
 
 taxonomies:
   tag: /tag/{slug}/

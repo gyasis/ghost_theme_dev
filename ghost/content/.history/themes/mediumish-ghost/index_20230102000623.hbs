@@ -19,7 +19,7 @@
 		<h2><span class="title">{{t "Featured"}}</span></h2>
 	</div>
 	<div class="row listfeaturedtag">
-		{{#get "posts" filter="featured:true" limit="1" as |featured|}}
+		{{#get "posts" filter="featured:true" limit="all" as |featured|}}
 
 		{{#foreach featured}}
 				 {{!-- The tag below includes the markup for each post - partials/post-card-featured.hbs --}}
@@ -37,13 +37,10 @@
 		<h2><span class="title">{{t "All Stories"}}</span> {{pagination}} <div class="clearfix"></div></h2>
 	</div>
 	<div class="row listrecent">
-		
 		{{#foreach posts}}
             {{^if featured}}
-				{{^has tag= Pizza}}
                      {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                      {{> "post-card"}}
-				{{/has}}
              {{/if}}
 		 {{/foreach}}
 	<div class="clearfix"></div>

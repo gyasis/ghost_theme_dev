@@ -37,13 +37,11 @@
 		<h2><span class="title">{{t "All Stories"}}</span> {{pagination}} <div class="clearfix"></div></h2>
 	</div>
 	<div class="row listrecent">
-		
+		{{get "posts" filter="News:false" limit="all" as |posts|}}
 		{{#foreach posts}}
-            {{^if featured}}
-				{{^has tag= Pizza}}
+            {{^if ["featured"]}}
                      {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                      {{> "post-card"}}
-				{{/has}}
              {{/if}}
 		 {{/foreach}}
 	<div class="clearfix"></div>

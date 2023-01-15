@@ -39,11 +39,11 @@
 	<div class="row listrecent">
 		
 		{{#foreach posts}}
-            {{^if featured}}
-				{{^has tag= Pizza}}
+            {{^if featured }}
+		
                      {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                      {{> "post-card"}}
-				{{/has}}
+			
              {{/if}}
 		 {{/foreach}}
 	<div class="clearfix"></div>
